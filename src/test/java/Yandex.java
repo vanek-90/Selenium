@@ -19,9 +19,9 @@ public class Yandex {
         driver.get("https://translate.yandex.ru/?utm_source=wizard"); // Переходим по ссылке
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         // Находим элемент "Сайт", ждем, когда ссылка удет кликабельна
-        WebElement elemnt = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/a[1]"));
-        wait.until(ExpectedConditions.elementToBeClickable((elemnt)));
-        elemnt.click();
+        WebElement element = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/a[1]"));
+        wait.until(ExpectedConditions.elementToBeClickable((element)));
+        element.click();
 
         // Открывается страница перевода сайта. Там находим поле для ввода ссылки. И затем вставляем ссылку.
         //driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
